@@ -141,9 +141,9 @@ export function AvailabilitySettings({ slots }) {
 
             <Button
               onClick={() => setShowForm(true)}
-              className="w-full bg-emerald-600 hover:bg-emerald-700"
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
             >
-              <Plus className="h-4 w-4 mr-2" />
+              <Plus className="h-4 w-4 mr-1" />
               Set Availability Time
             </Button>
           </>
@@ -152,7 +152,7 @@ export function AvailabilitySettings({ slots }) {
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-4 border border-emerald-900/20 rounded-md p-4"
           >
-            <h3 className="text-lg font-medium text-white mb-2">
+            <h3 className="text-lg font-medium text-emerald-400 mb-2">
               Set Daily Availability
             </h3>
 
@@ -211,7 +211,7 @@ export function AvailabilitySettings({ slots }) {
                     Saving...
                   </>
                 ) : (
-                  "Save Availability"
+                  "Save"
                 )}
               </Button>
             </div>

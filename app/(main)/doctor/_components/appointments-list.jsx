@@ -34,7 +34,7 @@ export default function DoctorAppointmentsList() {
             <p className="text-muted-foreground">Loading appointments...</p>
           </div>
         ) : appointments.length > 0 ? (
-          <div className="space-y-4">
+          <div className="space-y-3">
             {appointments.map((appointment) => (
               <AppointmentCard
                 key={appointment.id}

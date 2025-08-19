@@ -20,6 +20,7 @@ export default async function DoctorsPage() {
                   <div className="text-emerald-400">{specialty.icon}</div>
                 </div>
                 <h3 className="font-medium text-white">{specialty.name}</h3>
+                <p className="text-muted-foreground text-xs">{specialty.description}</p>
               </CardContent>
             </Card>
           </Link>

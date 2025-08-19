@@ -31,15 +31,16 @@ export default function ScrollToTopButton() {
         <Button
         size={"lg"}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-muted/50 p-4 rounded shadow-lg hover:bg-muted/20 border border-emerald-500 transition"
+          className="fixed bottom-8 right-6 bg-muted/50 p-4 cursor-pointer rounded shadow-lg hover:bg-muted/20 border border-emerald-500 transition"
         >
-          <ChevronUp size={40} className='text-emerald-400'/>
+          <ChevronUp size={40} className='text-emerald-400 text-3xl'/>
         </Button>
 
        
-      {/* <Link href={"https://wa.me/qr/PGAM4E6MEV7QI1 "}>
-          <i className="fa fa-whatsapp w-14 h-14 fixed bottom-6 left-6 rounded shadow-lg hover:bg-muted/20 border border-emerald-400 transition-all" aria-hidden="true"></i> 
-      </Link> */}
+      <div className="fixed bottom-8 left-6 ">
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/146754375.js"></script>
+
+      </div>
         </div>
       )}
     </>

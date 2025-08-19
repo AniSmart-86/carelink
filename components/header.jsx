@@ -27,9 +27,9 @@ export default async function Header() {
           <Image
             src="/doclink-logo.png"
             alt="DocLink Logo"
-            width={400}
+            width={80}
             height={60}
-            className="h-10 w-auto object-contain"
+            className="h-10 w-auto object-cover"
           />
         </Link>
 
@@ -57,9 +57,9 @@ export default async function Header() {
               <Link href="/doctor">
                 <Button
                   variant="outline"
-                  className="hidden md:inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-2"
                 >
-                  <Stethoscope className="h-4 w-4" />
+                  <Stethoscope className="hidden md:block h-4 w-4" />
                   Doctor Dashboard
                 </Button>
                 <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
@@ -73,9 +73,9 @@ export default async function Header() {
               <Link href="/appointments">
                 <Button
                   variant="outline"
-                  className="hidden md:inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-2 text-sm md:text-xl"
                 >
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="hidden md:block h-4 w-4" />
                   My Appointments
                 </Button>
                 <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
@@ -89,7 +89,7 @@ export default async function Header() {
               <Link href="/onboarding">
                 <Button
                   variant="outline"
-                  className="hidden md:inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-2 text-sm md:text-xl"
                 >
                   <User className="h-4 w-4" />
                   Complete Profile
@@ -128,7 +128,7 @@ export default async function Header() {
 
           <SignedOut>
             <SignInButton>
-              <Button variant="secondary">Sign In</Button>
+              <Button variant="secondary" className='text-emerald-400 border border-emerald-400'>Sign In</Button>
             </SignInButton>
           </SignedOut>
 

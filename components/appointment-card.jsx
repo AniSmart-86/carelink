@@ -311,7 +311,7 @@ export function AppointmentCard({
 
       {/* Appointment Details Dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-md md:max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">
               Appointment Details
@@ -354,7 +354,7 @@ export function AppointmentCard({
             </div>
 
             {/* Appointment Time */}
-            <div className="space-y-2">
+            <div className="space-y-1">
               <h4 className="text-sm font-medium text-muted-foreground">
                 Scheduled Time
               </h4>

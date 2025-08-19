@@ -43,7 +43,7 @@ export function AppointmentForm({ doctorId, slot, onBack, onComplete }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="bg-muted/20 p-4 rounded-lg border border-emerald-900/20 space-y-3">
+      <div className="bg-muted/20 p-4 rounded-lg border border-emerald-900/20 space-y-1 md:space-y-3">
         <div className="flex items-center">
           <Calendar className="h-5 w-5 text-emerald-400 mr-2" />
           <span className="text-white font-medium">
@@ -73,7 +73,7 @@ export function AppointmentForm({ doctorId, slot, onBack, onComplete }) {
           onChange={(e) => setDescription(e.target.value)}
           className="bg-background border-emerald-900/20 h-32"
         />
-        <p className="text-sm text-muted-foreground">
+        <p className="text-xs text-muted-foreground">
           This information will be shared with the doctor before your
           appointment.
         </p>

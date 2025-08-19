@@ -138,7 +138,7 @@ const toggleFaq = (index)=>{
              type="button"
         onClick={()=>setOpen(true)}
         disabled={loading}
-        className="border border-emerald-700 bg-muted/20 cursor-pointer text-emerald-400 text-md px-4 py-6 mt-2 rounded hover:bg-emerald-800 w-full"
+        className="border border-emerald-400 bg-muted/20 cursor-pointer text-emerald-400 text-md px-4 py-6 mt-2 rounded hover:bg-emerald-600 w-full"
       >
        Verify Drugs
       </Button>
@@ -161,7 +161,7 @@ const toggleFaq = (index)=>{
                 Healthcare made simple
               </Badge>
 
-              <h1 className="text-2xl md:4xl my-6 leading-tight"> Hi
+              <h1 className="text-3xl font-bold md:4xl my-6 leading-tight"> Hi!
                 <span className="text-emerald-400 text-3xl md:text-4xl font-bold leading-tight"> {user?.firstName}</span>
               </h1>
 
@@ -469,7 +469,7 @@ const toggleFaq = (index)=>{
 <Dialog open={openModal} onOpenChange={setOpenModal}>
     <DialogContent className="flex flex-col items-center justify-center">
      <DialogHeader>
-    <DialogTitle className='text-xl font-bold gradient-title text-center'>Successful Reponse!</DialogTitle>
+    <DialogTitle className='text-xl font-bold gradient-title text-center'>Assistant Result</DialogTitle>
 
     </DialogHeader>
    
