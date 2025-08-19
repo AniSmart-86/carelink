@@ -15,6 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { useUser } from "@clerk/nextjs"; 
 
 export default function Home() {
 
@@ -31,9 +32,9 @@ const [isloading, setIsLoading] = useState(false);
 const [aiResult, setAiResult] = useState("");
 const [openIndex, setOpenIndex] = useState(null);
 
-console.log(aiResult);
 
 
+const { user } = useUser();
 const toggleFaq = (index)=>{
   setOpenIndex(openIndex === index ? null : index)
 }
@@ -159,6 +160,11 @@ const toggleFaq = (index)=>{
               >
                 Healthcare made simple
               </Badge>
+
+              <h1 className="text-2xl md:4xl my-6 leading-tight"> Hi
+                <span className="text-emerald-400 text-3xl md:text-4xl font-bold leading-tight"> {user?.firstName}</span>
+              </h1>
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Connect with doctors <br />
                 <span className="gradient-title">anytime, anywhere</span>
@@ -190,7 +196,7 @@ const toggleFaq = (index)=>{
 
             <div className="relative h-[400px] lg:h-[500px] rounded-xl overflow-hidden">
               <Image
-                src="/Banner2.jpg"
+                src="/hero-img.jpg"
                 alt="Doctor consultation"
                 fill
                 priority
