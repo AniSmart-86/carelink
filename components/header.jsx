@@ -73,13 +73,13 @@ export default async function Header() {
               <Link href="/appointments">
                 <Button
                   variant="outline"
-                  className="inline-flex items-center gap-2 text-sm md:text-xl"
+                  className="inline-flex items-center gap-2 text-sx md:text-xl"
                 >
                   <Calendar className="hidden md:block h-4 w-4" />
                   My Appointments
                 </Button>
-                <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
-                  <Calendar className="h-4 w-4" />
+                <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
+                  <Calendar className=" h-4 w-4" />
                 </Button>
               </Link>
             )}
