@@ -21,15 +21,15 @@ export default async function Header() {
   }
 
   return (
-    <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-10 supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed top-0 w-full border-b-2 bg-emerald-400/20 backdrop-blur-md z-10 supports-[backdrop-filter]:bg-emerald-900/20">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 cursor-pointer">
+        <Link href="/" className=" cursor-pointer">
           <Image
             src="/doclink-logo.png"
             alt="DocLink Logo"
-            width={80}
+            width={100}
             height={60}
-            className="h-10 w-auto object-cover"
+            className="h-10 w-full object-cover"
           />
         </Link>
 
@@ -46,7 +46,7 @@ export default async function Header() {
                   <ShieldCheck className="h-4 w-4" />
                   Admin Dashboard
                 </Button>
-                <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
+                <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
                   <ShieldCheck className="h-4 w-4" />
                 </Button>
               </Link>
@@ -62,7 +62,7 @@ export default async function Header() {
                   <Stethoscope className="hidden md:block h-4 w-4" />
                   Doctor Dashboard
                 </Button>
-                <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
+                <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
                   <Stethoscope className="h-4 w-4" />
                 </Button>
               </Link>

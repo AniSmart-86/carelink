@@ -432,8 +432,8 @@ export function AppointmentCard({
                     <>
                       <Video className="h-4 w-4 mr-2" />
                       {isAppointmentActive()
-                        ? "Join Video Call"
-                        : "Video call will be available 30 minutes before appointment"}
+                        ? <p>Join Video Call</p>
+                        : <span className="text-xs">Video call will be available 30 minutes before appointment</span> }
                     </>
                   )}
                 </Button>

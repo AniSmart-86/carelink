@@ -257,7 +257,7 @@ export function DoctorEarnings({ earnings, payouts = [] }) {
           <Alert>
             <AlertCircle className="h-4 w-4" />
             <AlertDescription className="text-sm">
-              <strong>Payout Structure:</strong> You earn $8 per credit.
+              <strong>Payout Structure:</strong> You earn $4 on 10 credit.
               Platform fee is $2 per credit. Payouts include all your available
               credits and are processed via PayPal.
             </AlertDescription>
