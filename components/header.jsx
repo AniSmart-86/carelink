@@ -21,7 +21,7 @@ export default async function Header() {
   }
 
   return (
-    <header className="fixed top-0 w-full border-b-2 bg-emerald-400/20 backdrop-blur-md z-10 supports-[backdrop-filter]:bg-emerald-900/20">
+    <header className="fixed rounded-b-2xl top-0 w-full border-b-2 border-b-emerald-400 bg-black backdrop-blur-sm z-10 supports-[backdrop-filter]:bg-black-200">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className=" cursor-pointer">
           <Image

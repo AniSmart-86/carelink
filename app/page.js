@@ -104,14 +104,14 @@ const toggleFaq = (index)=>{
       
     <div>
 
-      <Card className='pt-20 w-full bg-muted/50 border border-emerald-600'>
+      <Card className='mt-20 w-full h-auto border border-emerald-600'>
       <div className="p-6 md:flex md:items-center md:justify-between gap-2">
       <div>
       <form onSubmit={handleCheck}>
       <h2 className="text-xl font-bold mb-2">AI Symptom Checker</h2>
       <Textarea
         className="border border-emerald-600 p-3 rounded"
-        rows={4}
+        rows={6}
         placeholder="Describe how you feel..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
@@ -119,7 +119,7 @@ const toggleFaq = (index)=>{
       <Button
         type="submit"
         disabled={isloading}
-        className="bg-emerald-500 text-white text-md px-8 py-6 md:py-4 mt-4 rounded hover:bg-emerald-700 cursor-pointer"
+        className="bg-emerald-500 text-white text-md px-2 py-4 md:py-4 w-full mt-4 rounded-2xl hover:bg-emerald-700 cursor-pointer"
       >
         {isloading ?( 
           <>
@@ -138,7 +138,7 @@ const toggleFaq = (index)=>{
              type="button"
         onClick={()=>setOpen(true)}
         disabled={loading}
-        className="border border-emerald-400 bg-muted/20 cursor-pointer text-emerald-400 text-md px-4 py-6 mt-2 rounded hover:bg-emerald-600 w-full"
+        className="border border-emerald-400 bg-muted/20 cursor-pointer text-emerald-400 text-md px-4 py-4 mt-2 rounded-3xl hover:bg-emerald-600 w-full hover:text-white"
       >
        Verify Drugs
       </Button>
@@ -425,13 +425,13 @@ const toggleFaq = (index)=>{
 <section>
 
 
-<Dialog open={open} onOpenChange={setOpen}>
-    <DialogContent className="flex flex-col items-center justify-center">
+<Dialog open={open} onOpenChange={setOpen} >
+    <DialogContent className="bg-gray-800/80 backdrop-blur-sm">
     
     <DialogHeader>
     <DialogTitle className='text-xl font-bold gradient-title text-center'>Verify Your Drug</DialogTitle>
 
-    <DialogDescription>
+    <DialogDescription className={"text-xs"}>
   Please enter your drug NAFDAC number to verify
     </DialogDescription>
     </DialogHeader>
@@ -452,21 +452,20 @@ const toggleFaq = (index)=>{
           <Loader2 className='h-4 w-4 mr-2 animate-spin'/>
            Verifying...
            </>
-            ):( "Verify Drug")}
+            ):( "Verify")}
       </Button>
 
       </form>
  
-            <Card>
-<CardContent>{result}</CardContent>
-            </Card>
+{result}
+           
           
 </DialogContent>
 </Dialog>
 
 
 {/* AI Result */}
-<Dialog open={openModal} onOpenChange={setOpenModal}>
+<Dialog open={openModal} onOpenChange={setOpenModal} c>
     <DialogContent className="flex flex-col items-center justify-center">
      <DialogHeader>
     <DialogTitle className='text-xl font-bold gradient-title text-center'>Assistant Result</DialogTitle>
