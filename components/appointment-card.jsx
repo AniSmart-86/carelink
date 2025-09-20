@@ -323,7 +323,7 @@ export function AppointmentCard({
             </DialogDescription>
           </DialogHeader>
 
-          <div className="space-y-4 py-4">
+          <div className="space-y-2 p-4">
             {/* Other Party Information */}
             <div className="space-y-2">
               <h4 className="text-sm font-medium text-muted-foreground">
@@ -417,7 +417,7 @@ export function AppointmentCard({
                   Video Consultation
                 </h4>
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 mx-2"
                   disabled={
                     !isAppointmentActive() || action === "video" || tokenLoading
                   }
@@ -433,7 +433,7 @@ export function AppointmentCard({
                       <Video className="h-4 w-4 mr-2" />
                       {isAppointmentActive()
                         ? <p>Join Video Call</p>
-                        : <span className="text-xs">Video call will be available 30 minutes before appointment</span> }
+                        : <span className="text-xs">Video call will be available 30mins time</span> }
                     </>
                   )}
                 </Button>
