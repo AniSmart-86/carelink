@@ -311,7 +311,7 @@ export function AppointmentCard({
 
       {/* Appointment Details Dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-md md:max-w-2xl">
+        <DialogContent className="max-w-md md:max-w-2xl py-4 border border-emerald-400">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">
               Appointment Details
@@ -417,7 +417,7 @@ export function AppointmentCard({
                   Video Consultation
                 </h4>
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 mx-2"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 mx-2 text-white"
                   disabled={
                     !isAppointmentActive() || action === "video" || tokenLoading
                   }
@@ -564,7 +564,7 @@ export function AppointmentCard({
 
             <Button
               onClick={() => setOpen(false)}
-              className="bg-emerald-600 hover:bg-emerald-700"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white"
             >
               Close
             </Button>
