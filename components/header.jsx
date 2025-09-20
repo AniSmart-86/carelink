@@ -23,18 +23,12 @@ export default async function Header() {
   return (
     <header className="fixed rounded-b-2xl top-0 w-full border-b-2 border-b-emerald-400 bg-black backdrop-blur-sm z-10 supports-[backdrop-filter]:bg-black-200">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className=" cursor-pointer">
-          <Image
-            src="/doclink-logo.png"
-            alt="DocLink Logo"
-            width={100}
-            height={60}
-            className="h-10 w-full object-cover"
-          />
+        <Link href="/" className=" cursor-pointer text-2xl text-white font-bold items-center space-x-2 flex">
+         Ndu<span className='text-emerald-400'>Linka</span>
         </Link>
 
         {/* Action Buttons */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-center space-x-2">
           <SignedIn>
             {/* Admin Links */}
             {user?.role === "ADMIN" && (
@@ -43,12 +37,12 @@ export default async function Header() {
                   variant="outline"
                   className="hidden md:inline-flex items-center gap-2"
                 >
-                  <ShieldCheck className="h-4 w-4" />
+                  <ShieldCheck className="hidden md:inline h-4 w-4" />
                   Admin Dashboard
                 </Button>
-                <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
+                {/* <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
                   <ShieldCheck className="h-4 w-4" />
-                </Button>
+                </Button> */}
               </Link>
             )}
 
@@ -59,12 +53,12 @@ export default async function Header() {
                   variant="outline"
                   className="inline-flex items-center gap-2"
                 >
-                  <Stethoscope className="hidden md:block h-4 w-4" />
+                  <Stethoscope className="hidden md:inline h-4 w-4" />
                   Doctor Dashboard
                 </Button>
-                <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
+                {/* <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
                   <Stethoscope className="h-4 w-4" />
-                </Button>
+                </Button> */}
               </Link>
             )}
 
@@ -73,14 +67,12 @@ export default async function Header() {
               <Link href="/appointments">
                 <Button
                   variant="outline"
-                  className="inline-flex items-center gap-2 text-sx md:text-xl"
+                  className="inline-flex items-center gap-2 text-xs md:text-sm"
                 >
-                  <Calendar className="hidden md:block h-4 w-4" />
+                  <Calendar className="hidden md:inline h-4 w-4" />
                   My Appointments
                 </Button>
-                <Button variant="ghost" className="hidden md:block w-10 h-10 p-0">
-                  <Calendar className=" h-4 w-4" />
-                </Button>
+                
               </Link>
             )}
 

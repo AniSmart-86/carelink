@@ -307,7 +307,7 @@ export function DoctorEarnings({ earnings, payouts = [] }) {
       <Dialog open={showPayoutDialog} onOpenChange={setShowPayoutDialog}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-white">
+            <DialogTitle className="text-md font-bold text-white">
               Request Payout
             </DialogTitle>
             <DialogDescription>

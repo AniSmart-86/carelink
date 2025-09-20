@@ -104,7 +104,7 @@ const toggleFaq = (index)=>{
       
     <div>
 
-      <Card className='mt-20 w-full h-auto border border-emerald-600'>
+      <Card className='mt-20 w-full h-auto border border-emerald-600 animate-bounce'>
       <div className="p-6 md:flex md:items-center md:justify-between gap-2">
       <div>
       <form onSubmit={handleCheck}>

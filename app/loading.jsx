@@ -9,9 +9,7 @@ function Loading () {
         <Loader2 className='h-16 w-16 text-emerald-400 animate-spin'/>
         <p className='text-2xl text-white'>Loading...</p>
 
-        <div className='mt-4 text-muted-foreground text-xs'>
-          Please wait
-          </div>
+       
     </div>
     </div>
 

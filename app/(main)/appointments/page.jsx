@@ -9,9 +9,9 @@ import { getCurrentUser } from "@/actions/onboarding";
 export default async function PatientAppointmentsPage() {
   const user = await getCurrentUser();
 
-  if (!user || user.role !== "PATIENT") {
-    redirect("/onboarding");
-  }
+  // if (!user || user.role !== "PATIENT") {
+  //   redirect("/onboarding");
+  // }
 
   const { appointments, error } = await getPatientAppointments();
 

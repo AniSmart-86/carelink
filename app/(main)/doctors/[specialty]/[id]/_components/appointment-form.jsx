@@ -71,7 +71,7 @@ export function AppointmentForm({ doctorId, slot, onBack, onComplete }) {
           placeholder="Please provide any details about your medical concern or what you'd like to discuss in the appointment..."
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="bg-background border-emerald-900/20 h-32"
+          className="bg-background border-emerald-500 h-32"
         />
         <p className="text-xs text-muted-foreground">
           This information will be shared with the doctor before your

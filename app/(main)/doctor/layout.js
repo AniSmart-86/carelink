@@ -2,7 +2,7 @@ import { Stethoscope } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 
 export const metadata = {
-  title: "Doctor Dashboard - DocLink",
+  title: "Doctor Dashboard - NduLinka",
   description: "Manage your appointments and availability",
 };
 

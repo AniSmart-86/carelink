@@ -58,7 +58,7 @@ export async function recommendSpecialtyAI(symptoms) {
     const prompt = `
     A patient is describing their symptoms. Based on the description, first sympathize with them and recommend the MOST relevant medical specialty.
     If symptoms are unclear, say "General Practitioner".
-    Reply ONLY with the specialty name and a short explanation, then ask them to visit the doctors page to book an appointment with the recommended doctor and appreciation them for using WelLink Healthcare.
+    Reply ONLY with the specialty name and a short explanation, then ask them to visit the doctors page to book an appointment with the recommended doctor and appreciation them for using NduLinka Healthcare.
 
     Symptoms: "${symptoms}"
     `;

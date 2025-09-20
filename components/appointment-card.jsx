@@ -211,9 +211,9 @@ export function AppointmentCard({
     const appointmentTime = new Date(appointment.startTime);
     const appointmentEndTime = new Date(appointment.endTime);
 
-    // Can join 30 minutes before start until end time
+    // Can join 10 minutes before start until end time
     return (
-      (appointmentTime.getTime() - now.getTime() <= 30 * 60 * 1000 &&
+      (appointmentTime.getTime() - now.getTime() <= 10 * 60 * 1000 &&
         now < appointmentTime) ||
       (now >= appointmentTime && now <= appointmentEndTime)
     );
@@ -228,7 +228,7 @@ export function AppointmentCard({
 
   return (
     <>
-      <Card className="border-emerald-900/20 hover:border-emerald-700/30 transition-all">
+      <Card className="border-emerald-500 hover:border-emerald-700/30 transition-all">
         <CardContent className="p-4">
           <div className="flex flex-col md:flex-row justify-between gap-4">
             <div className="flex items-start gap-3">
@@ -269,10 +269,10 @@ export function AppointmentCard({
                 variant="outline"
                 className={
                   appointment.status === "COMPLETED"
-                    ? "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
+                    ? "bg-emerald-900/20 border-emerald-900/30 text-emerald-400 px-4 py-2"
                     : appointment.status === "CANCELLED"
-                    ? "bg-red-900/20 border-red-900/30 text-red-400"
-                    : "bg-amber-900/20 border-amber-900/30 text-amber-400"
+                    ? "bg-red-900/20 border-red-900/30 text-red-400 px-4 py-2"
+                    : "bg-amber-900/20 border-amber-900/30 text-amber-400 px-4 py-2"
                 }
               >
                 {appointment.status}
@@ -412,7 +412,7 @@ export function AppointmentCard({
 
             {/* Join Video Call Button */}
             {appointment.status === "SCHEDULED" && (
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <h4 className="text-sm font-medium text-muted-foreground">
                   Video Consultation
                 </h4>
@@ -441,7 +441,7 @@ export function AppointmentCard({
             )}
 
             {/* Doctor Notes (Doctor can view/edit, Patient can only view) */}
-            <div className="space-y-2">
+            <div className="space-y-1">
               <div className="flex items-center justify-between">
                 <h4 className="text-sm font-medium text-muted-foreground">
                   Doctor Notes
@@ -516,8 +516,8 @@ export function AppointmentCard({
             </div>
           </div>
 
-          <DialogFooter className="flex flex-col-reverse sm:flex-row sm:justify-between sm:space-x-2">
-            <div className="flex gap-2">
+          <DialogFooter className="flex items-center flex-col-reverse sm:flex-row sm:justify-between sm:space-x-2">
+            <div className="flex items-center justify-center gap-2">
               {/* Mark as Complete Button - Only for doctors */}
               {canMarkCompleted() && (
                 <Button
