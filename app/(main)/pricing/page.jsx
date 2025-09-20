@@ -47,7 +47,7 @@ export default async function PricingPage() {
           Questions? We're Here to Help
         </h2>
         <p className="text-muted-foreground mb-4">
-          Contact our support team at <a className="text-2xl" href="mail:aniokechukwu540@gmail.com">Email</a>
+          Contact our support team at <a className="text-sm text-blue-500 text-underline" href="mail:aniokechukwu540@gmail.com">Email</a>
         </p>
       </div>
     </div>
