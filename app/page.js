@@ -55,12 +55,13 @@ const toggleFaq = (index)=>{
     if (data.success) {
       setAiResult(data.message);
       setOpenModal(true);
-      console.log(data.message);
+      // console.log(data.message);
     } else {
       toast.error(data.message);
     
     }
    } catch (error) {
+    // console.log(error)
     toast.error(error.message || "An error occurred during while analyzing");
    }finally{
     setIsLoading(false);
@@ -83,7 +84,7 @@ const toggleFaq = (index)=>{
       if (res.success) {
         setResult(res.data);
         toast.success("Drug verification successful!");
-        console.log("Drug details:", res.data);
+        // console.log("Drug details:", res.data);
        
       } else {
         toast.error("Failed to verify drug");

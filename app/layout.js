@@ -10,7 +10,7 @@ import ScrollToTopButton from "@/components/scrollOnTop";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "NduLinka Medical Health",
+  title: "NdụLinka Medical Healthcare",
   description: "Connect with doctors anytime, anywhere",
 };
 
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
             <footer className="bg-muted/50 py-12">
               <div className="container mx-auto px-4 text-center text-gray-200">
                <p className="text-sm text-gray-500 dark:text-gray-400">
-                © {new Date().getFullYear()} NduLinka. All rights reserved.
+                © {new Date().getFullYear()} NdụLinka. All rights reserved.
               </p>
               </div>
             </footer>

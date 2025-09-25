@@ -58,13 +58,13 @@ export async function recommendSpecialtyAI(symptoms) {
     const prompt = `
     A patient is describing their symptoms. Based on the description, first sympathize with them and recommend the MOST relevant medical specialty.
     If symptoms are unclear, say "General Practitioner".
-    Reply ONLY with the specialty name and a short explanation, then ask them to visit the doctors page to book an appointment with the recommended doctor and appreciation them for using NduLinka Healthcare.
+    then ask them to visit our doctors page to book an appointment with the recommended doctor and finally, appreciate them for using NduLinka Healthcare.
 
     Symptoms: "${symptoms}"
     `;
 
     const completion = await groq.chat.completions.create({
-      model: "llama3-70b-8192",
+      model: "llama-3.3-70b-versatile",
       messages: [{ role: "user", content: prompt }],
       max_tokens: 150,
       temperature: 0.3,

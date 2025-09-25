@@ -24,7 +24,7 @@ export default async function Header() {
     <header className="fixed rounded-b-2xl top-0 w-full border-b-2 border-b-emerald-400 bg-black backdrop-blur-sm z-10 supports-[backdrop-filter]:bg-black-200">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="text-italic cursor-pointer text-md sm:text-2xl text-white font-bold items-center space-x-2 flex">
-         Ndu<span className='text-emerald-400 '>Linka</span>
+         Ndụ<span className='text-emerald-400 '>Linka</span>
         </Link>
 
         {/* Action Buttons */}
